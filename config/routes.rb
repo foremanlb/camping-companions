@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :posts
+  resources :favorites
   resources :campsites
   devise_for :users, controllers: { registrations: 'registrations'}
   namespace :api do
