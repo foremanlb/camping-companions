@@ -10,10 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_08_193404) do
+ActiveRecord::Schema.define(version: 2021_05_08_203950) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "campsites", force: :cascade do |t|
+    t.string "name"
+    t.string "state"
+    t.string "address"
+    t.string "phone_number"
+    t.string "website"
+    t.text "description"
+    t.boolean "full_hookups"
+    t.boolean "partial_hookups"
+    t.boolean "fishing"
+    t.boolean "showers"
+    t.boolean "bathrooms"
+    t.string "map_img_url"
+    t.string "site_img_url"
+    t.string "season"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false

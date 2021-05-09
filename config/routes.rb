@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :campsites
   devise_for :users, controllers: { registrations: 'registrations'}
   namespace :api do
     namespace :v1 do
