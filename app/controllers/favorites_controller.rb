@@ -17,7 +17,6 @@ class FavoritesController < ApiController
 
   def destroy
     @campsite = Campsite.find(params[:campsite_id])
-
     current_user.campsites.delete(@campsite)
   end
 end
