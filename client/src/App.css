@@ -3,11 +3,12 @@
 }
 
 .navbar-container {
-  width: 100vw;
+  width: 98vw;
   margin: 0 auto;
   height: 90vh;
   display: flex;
   transition: 1s ease;
+  margin: 0;
 }
 
 .main-content {

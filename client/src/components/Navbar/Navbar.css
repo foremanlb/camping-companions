@@ -1,11 +1,12 @@
 .navbar {
-  width: 15%;
+  width: 15vw;
   display: flex;
   flex-wrap: wrap;
   height: 100%;
   background-color: #bbe1c3;
   transition: 1s ease;
   position: relative;
+  overflow: scroll;
 }
 
 .states {
@@ -13,20 +14,23 @@
   flex-basis: 100%;
   text-decoration: none;
   color: black;
+  width: 100%;
 }
 
 .menu {
   position: absolute;
   border: none;
-  height: 40px;
+  height: 20px;
   width: 40px;
-  border-radius: 50%;
   box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.3);
-  left: 100%;
-  top: 50%;
+  left: 85%;
+  top: 50vh;
   transform: translateX(-50%);
+  transform: rotate(90deg);
   cursor: pointer;
   font-size: 10px;
+  background-color: #869d7a;
+  outline: none;
 }
 
 .navbar_small {
@@ -37,4 +41,5 @@
   transition: 1s ease;
   display: flex;
   flex-wrap: wrap;
+  font-size: 1px;
 }
