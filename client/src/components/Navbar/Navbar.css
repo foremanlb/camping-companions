@@ -1,0 +1,13 @@
+.navbar {
+  width: 15vw;
+}
+
+.navbarList {
+  width: 15vw;
+  list-style-type: none;
+  padding: 0;
+}
+
+.states {
+  padding: 0;
+}

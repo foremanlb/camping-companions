@@ -1,12 +1,16 @@
 class PostsController < ApiController
+  skip_before_action :authenticate_user!, only: %i[index show]
   def index
     @posts = Post.all
-
     render json: @posts
   end
 
+  def show
+    @post = Post.find(params[:id])
+    render json: @campsite
+  end
+
   def create
-    # @campsite = Campsite.find(params[:campsite_id])
     @post = Post.new(post_params)
 
     if @post.save
@@ -14,18 +18,23 @@ class PostsController < ApiController
     else
       render json: @post.errors
     end
+  end
 
-    # if current_user.campsites << @campsite
-    #   render json: current_user.campsites
-    # else
-    #   render json: current_user.errors
-    # end
+  def update
+    @post = Post.find(params[:id])
+
+    if @post.update(post_params)
+      render json: @post
+    else
+      render json: @post.errors
+    end
   end
 
   def destroy
-    @campsite = Campsite.find(params[:campsite_id])
+    @post = Post.find(params[:id])
 
-    current_user.campsites.delete(@campsite)
+    @post.destroy
+    render json: { message: "#{@post.title} has been deleted." }
   end
 
   private
