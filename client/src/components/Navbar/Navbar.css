@@ -1,13 +1,40 @@
 .navbar {
-  width: 15vw;
-}
-
-.navbarList {
-  width: 15vw;
-  list-style-type: none;
-  padding: 0;
+  width: 15%;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  background-color: #bbe1c3;
+  transition: 1s ease;
+  position: relative;
 }
 
 .states {
   padding: 0;
+  flex-basis: 100%;
+  text-decoration: none;
+  color: black;
+}
+
+.menu {
+  position: absolute;
+  border: none;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.3);
+  left: 100%;
+  top: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  font-size: 10px;
+}
+
+.navbar_small {
+  width: 1%;
+  height: 100%;
+  position: relative;
+  text-indent: -9999px;
+  transition: 1s ease;
+  display: flex;
+  flex-wrap: wrap;
 }
