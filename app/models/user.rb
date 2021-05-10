@@ -6,6 +6,6 @@ class User < ApplicationRecord
 
   has_many :favorites
   has_many :campsites, through: :favorites
-  has_many :posts, dependent: :destroy
-  
+  has_many :posts
+  has_many :campsites, ->(user) { where favorites: user.favorites }, through: :posts
 end

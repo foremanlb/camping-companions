@@ -36,4 +36,10 @@ class CampsitesController < ApiController
     @campsite.destroy
     render json: { message: "#{@campsite.name} has been deleted." }
   end
+
+  private
+
+  def campsite_params
+    params.require(:campsite).permit(:name, :state, :address, :phone_number, :website, :description, :full_hookups, :partial_hookups, :fishing, :showers, :bathrooms, :map_img_url, :site_img_url, :season)
+  end
 end
