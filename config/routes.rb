@@ -2,10 +2,12 @@ Rails.application.routes.draw do
   resources :posts
   resources :favorites
   resources :campsites
-  devise_for :users, controllers: { registrations: 'registrations'}
+
+  devise_for :users, controllers: { registrations: 'registrations' }
+
   namespace :api do
     namespace :v1 do
-      get 'post/index'
+      # get 'post/index'
       post :auth, to: 'authentication#create'
       get '/auth' => 'authentication#fetch'
     end

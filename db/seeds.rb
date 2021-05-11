@@ -21,7 +21,7 @@ campsites = Campsite.create([
                                 bathrooms: true,
                                 map_img_url: '',
                                 site_img_url: '',
-                                season: 'year round'
+                                season: 'Year Round'
                               }
                               # {
                               #   name: ,

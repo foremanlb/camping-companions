@@ -15,7 +15,8 @@ export default function Login(props) {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    await loginUser(input)
+    const user = await loginUser(input)
+    console.log(user)
     props.verify()
   }
 

@@ -1,5 +1,5 @@
 import './App.css';
-import { Route, Switch } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import Header from './components/Header/Header'
 import Navbar from './components/Navbar/Navbar'
@@ -11,6 +11,7 @@ import Post from './screens/Post/Post'
 import { getPosts } from './services/posts'
 import { verifyUser } from './services/auth'
 import Login from './components/Login/Login'
+import SignUp from './components/SignUp/SignUp'
 
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
 
   const verify = async () => {
     let user = await verifyUser()
+    console.log(user)
     setCurrentUser(user)
   }
 
@@ -58,6 +60,9 @@ function App() {
           </Route>
           <Route path='/post/:id'>
             <Post />
+          </Route>
+          <Route path='/signup'>
+            <SignUp verify={verify}/>
           </Route>
         </div>
       </div>
