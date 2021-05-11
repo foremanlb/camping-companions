@@ -19,3 +19,7 @@ export const updatePost = async (formData) => {
   const res = await api.put('/posts', { post: formData })
   return res.data
 }
+
+export const deletePost = async (id) => {
+  await api.delete(`/posts/${id}`)
+}

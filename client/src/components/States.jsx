@@ -1,10 +1,7 @@
 import React from 'react'
-import {useParams} from 'react-router-dom'
-import CampsiteContainer from '../../components/CampsiteContainer/CampsiteContainer'
 
-export default function Campsites() {
-  const { id } = useParams()
-  const states = {
+export default function States() {
+  const States = {
     "AL": "Alabama",
     "AK": "Alaska",
     "AZ": "Arizona",
@@ -56,12 +53,4 @@ export default function Campsites() {
     "WI": "Wisconsin",
     "WY": "Wyoming"
   }
-
-  const stateName = states.[id]
-  return (
-    <div>
-      <h1>Welcome to {stateName}</h1>
-      <CampsiteContainer />
-    </div>
-  )
 }
