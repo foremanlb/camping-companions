@@ -2,7 +2,7 @@ import React from 'react'
 import {useParams} from 'react-router-dom'
 import CampsiteContainer from '../../components/CampsiteContainer/CampsiteContainer'
 
-export default function Campsites() {
+export default function Campsites(props) {
   const { id } = useParams()
   const states = {
     "AL": "Alabama",
@@ -61,7 +61,7 @@ export default function Campsites() {
   return (
     <div>
       <h1>Welcome to {stateName}</h1>
-      <CampsiteContainer />
+      <CampsiteContainer abbreviation={id} campsites={props.campsites} />
     </div>
   )
 }

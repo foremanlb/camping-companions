@@ -1,6 +1,6 @@
 import api from './apiConfig'
 
-export const getAllCampsites = async () => {
+export const getCampsites = async () => {
   const res = await api.get('/campsites')
   return res.data
 }
