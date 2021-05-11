@@ -15,6 +15,7 @@ export const loginUser = async (formData) => {
 export const verifyUser = async () => {
   const token = localStorage.getItem("authToken")
   if (token) {
+    console.dir(api.defaults.headers)
     api.defaults.headers.common.authorization = `Bearer ${token}`
     const res = await api.get('/api/v1/auth')
     return res.data
