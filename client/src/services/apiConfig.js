@@ -9,7 +9,7 @@ const getToken = async () => {
 let apiUrl;
 
 const apiUrls = {
-  production: "",
+  production: "https://camping-companions-db.herokuapp.com/",
   development: "http://localhost:3000/",
 };
 
