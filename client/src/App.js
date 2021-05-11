@@ -6,6 +6,7 @@ import Navbar from './components/Navbar/Navbar'
 import Home from './screens/Home/Home'
 import Campsites from './screens/Campsites/Campsites'
 import { getCampsites } from './services/campsites'
+import CampsiteDetails from './screens/CampsiteDetails/CampsiteDetails'
 
 
 function App() {
@@ -27,14 +28,15 @@ function App() {
       <div className='navbar-container'>
         <Navbar isActive={isActive} setIsActive={setIsActive}/>
         <div className={isActive ? 'main-content' : 'main-content_large'}>
-          {/* <Switch> */}
-            <Route exact path='/'>
-              <Home />
-            </Route>
-            <Route path='/:id'>
+          <Route exact path='/'>
+            <Home />
+          </Route>
+          <Route path='/states/:id'>
             <Campsites campsites={campsites}/>
-            </Route>
-          {/* </Switch> */}
+          </Route>
+          <Route path='/campsite/:id'>
+            <CampsiteDetails />
+          </Route>
         </div>
       </div>
     </div>

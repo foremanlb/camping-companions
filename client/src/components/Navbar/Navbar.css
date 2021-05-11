@@ -24,7 +24,7 @@
   width: 40px;
   box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.3);
   left: 85%;
-  top: 50vh;
+  top: 15vh;
   transform: translateX(-50%);
   transform: rotate(90deg);
   cursor: pointer;
@@ -34,7 +34,7 @@
 }
 
 .navbar_small {
-  width: 1%;
+  width: 0%;
   height: 100%;
   position: relative;
   text-indent: -9999px;

@@ -3,7 +3,7 @@
 }
 
 .navbar-container {
-  width: 100vw;
+  width: 100%;
   height: 90vh;
   display: flex;
   transition: 1s ease;
@@ -11,7 +11,7 @@
 }
 
 .main-content {
-  width: 85%;
+  width: 100%;
   height: 100%;
   transition: 1s ease;
 }
