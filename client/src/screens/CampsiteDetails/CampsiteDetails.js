@@ -18,7 +18,7 @@ export default function CampsiteDetails(props) {
     setCampsite(campsite)
   }
 
-  const handleClick = async (id) => {
+  const handleClick = async () => {
     const res = await createFavorite(id)
     console.log(res)
   }
@@ -100,7 +100,7 @@ export default function CampsiteDetails(props) {
       {renderFishing()}
       <h2>placeholder</h2>
       <button onClick={handleClick}>Add to favorites</button>
-      <CampsitePosts campsiteID = {campsite.id} />
+      <CampsitePosts campsiteID={campsite.id} posts={props.posts}/>
     </div>
   )
 }

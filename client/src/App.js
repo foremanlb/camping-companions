@@ -7,15 +7,24 @@ import Home from './screens/Home/Home'
 import Campsites from './screens/Campsites/Campsites'
 import { getCampsites } from './services/campsites'
 import CampsiteDetails from './screens/CampsiteDetails/CampsiteDetails'
+import Post from './screens/Post/Post'
+import {getPosts} from './services/posts'
 
 
 function App() {
   const [isActive, setIsActive] = useState(false)
   const [campsites, setCampsites] = useState([])
+  const [posts, setPosts] = useState([])
 
   useEffect(() => {
     fetchCampsites()
+    fetchPosts()
   }, [])
+  
+  const fetchPosts = async () => {
+    const data = await getPosts()
+    setPosts(data)
+  }
 
   const fetchCampsites = async () => {
     const data = await getCampsites()
@@ -35,7 +44,10 @@ function App() {
             <Campsites campsites={campsites}/>
           </Route>
           <Route path='/campsite/:id'>
-            <CampsiteDetails />
+            <CampsiteDetails posts={posts}/>
+          </Route>
+          <Route path='/post/:id'>
+            <Post />
           </Route>
         </div>
       </div>
