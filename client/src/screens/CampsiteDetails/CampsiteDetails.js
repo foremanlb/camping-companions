@@ -89,6 +89,7 @@ export default function CampsiteDetails(props) {
       <h2>placeholder</h2>
       <p>{campsite.address}</p>
       <p>{campsite.phone_number}</p>
+      <p>Campground Website:<br/><a href={campsite.website} target='_blank' rel='noreferrer noopener'>{campsite.website}</a></p>
       <h3>Description</h3>
       <p>{campsite.description}</p>
       <h3>Open Season</h3>

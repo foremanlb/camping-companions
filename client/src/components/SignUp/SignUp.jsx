@@ -22,6 +22,7 @@ export default function SignUp(props) {
       password: input.password
     }
     await loginUser(login)
+    props.verify()
     history.push('/')
   }
 
