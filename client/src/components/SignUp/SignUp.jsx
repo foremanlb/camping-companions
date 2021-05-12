@@ -30,11 +30,11 @@ export default function SignUp(props) {
     <div>
       <h1>Sign Up</h1>
       <form onChange={handleChange} onSubmit={handleSubmit}>
-        <label>Email</label>
+        <label htmlFor='email'>Email</label>
         <input name="email" type="email" />
-        <label>Password</label>
+        <label htmlFor='password'>Password</label>
         <input name="password" type="password" />
-        <label>Password Confirmation</label>
+        <label htmlFor='password_confirmation'>Password Confirmation</label>
         <input name="password_confirmation" type="password" />
         <button type="submit">Sign Up</button>
       </form>
