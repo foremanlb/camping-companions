@@ -1,5 +1,5 @@
 import React from 'react'
-import { useParams, Route, Link } from 'react-router-dom'
+import { useParams} from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { getCampsite } from '../../services/campsites'
 import { createFavorite } from '../../services/favorites'
@@ -87,7 +87,7 @@ export default function CampsiteDetails(props) {
   return (
     <div>
       <h1>{campsite.name}</h1>
-      <h2>placeholder</h2>
+      <img src={campsite.site_img_url} alt='Campsite'></img>
       <p>{campsite.address}</p>
       <p>{campsite.phone_number}</p>
       <p>Campground Website:<br/><a href={campsite.website} target='_blank' rel='noreferrer noopener'>{campsite.website}</a></p>
@@ -100,7 +100,7 @@ export default function CampsiteDetails(props) {
       {renderShowers()}
       {renderBathrooms()}
       {renderFishing()}
-      <h2>placeholder</h2>
+      <img src={campsite.map_img_url} alt='Campsite Map'></img>
       <button onClick={handleClick}>Add to favorites</button>
       <CreatePost campsite={id} currentUser={props.currentUser} toggle={props.toggle} setToggle={props.setToggle} />
       <CampsitePosts campsite={campsite.id} posts={props.posts} currentUser={props.currentUser}/>
