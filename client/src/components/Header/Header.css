@@ -5,7 +5,7 @@
   height: 15vh;
   align-items: center;
   justify-content: space-between;
-  background-color: #f3ffb6;
+  background-color: #739e82;
   color: #2c5530;
   border-bottom: 4px ridge #d38b5d;
 }
@@ -15,6 +15,8 @@
 
 #home_link {
   padding-left: 15px;
+  height: 10vh;
+  width: auto;
 }
 
 #title {
