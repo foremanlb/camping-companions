@@ -3,7 +3,9 @@
   flex-wrap: wrap;
   width: 100%;
   justify-content: space-between;
-  background-image: #2c5530;
+  background-image: url("https://github.com/foremanlb/camping-companions/blob/master/client/src/assets/images/header_background.jpeg?raw=true");
+  background-position: bottom;
+  background-size: contain;
   color: white;
   border-bottom: 4px ridge #d38b5d;
 }
