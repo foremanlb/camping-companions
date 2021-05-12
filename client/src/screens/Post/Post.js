@@ -1,26 +1,40 @@
 import { useEffect, useState } from 'react'
 import {getPost} from '../../services/posts'
-import {useParams} from 'react-router-dom'
+import { useParams } from 'react-router-dom'
+import PostCrud from '../../components/PostCrud/PostCrud'
 
 export default function Post(props) {
   const { id } = useParams()
-  const [post, setPost ] = useState({})
+  const [post, setPost] = useState({})
+  const [toggle2, setToggle2] = useState(false)
 
   useEffect(() => {
     fetchPost()
-  }, [])
+  }, [toggle2])
 
   const fetchPost = async () => {
     const found = await getPost(id)
-    console.log(id)
-    console.log(found)
     setPost(found)
-  } 
+  }
+
+  const renderCrud = () => {
+    if (props.post.user_id === props.currentUser.id) {
+      return (
+        <PostCrud post={post} currentUser={props.currentUser} setToggle2={setToggle2} toggle2={toggle2}/>
+      )
+    } else {
+      return (
+        <>
+          <h1>{post.title}</h1>
+          <p>{post.content}</p>
+        </>
+      )
+    }
+  }
 
   return (
     <div>
-      <h1>{post.title}</h1>
-      <p>{post.content}</p>
+      {renderCrud()}
     </div>
   )
 }
