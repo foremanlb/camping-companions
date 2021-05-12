@@ -6,7 +6,7 @@ export default function CampsitePosts(props) {
   return (
     <div>
       {posts.map((post) => {
-        if (post.campsite_id === props.campsiteID) {
+        if (post.campsite_id === props.campsite) {
           return (
             <Link to={`/post/${post.id}`}>{post.title}</Link>
           )

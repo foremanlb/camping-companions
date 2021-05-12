@@ -1,9 +1,10 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Route, Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { getCampsite } from '../../services/campsites'
 import { createFavorite } from '../../services/favorites'
 import CampsitePosts from '../../components/CampsitePosts/CampsitePosts'
+import CreatePost from '../../components/CreatePost/CreatePost'
 
 export default function CampsiteDetails(props) {
   const { id } = useParams()
@@ -101,7 +102,8 @@ export default function CampsiteDetails(props) {
       {renderFishing()}
       <h2>placeholder</h2>
       <button onClick={handleClick}>Add to favorites</button>
-      <CampsitePosts campsiteID={campsite.id} posts={props.posts}/>
+      <CreatePost campsite={id} currentUser={props.currentUser} toggle={props.toggle} setToggle={props.setToggle} />
+      <CampsitePosts campsite={campsite.id} posts={props.posts} currentUser={props.currentUser}/>
     </div>
   )
 }

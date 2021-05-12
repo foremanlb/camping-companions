@@ -3,6 +3,7 @@ import UserPosts from '../../components/UserPosts/UserPosts'
 import Favorites from '../../components/Favorites/Favorites'
 
 export default function Profile(props) {
+
   return (
     <div>
       <h2>Welcome User!</h2>
