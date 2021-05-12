@@ -19,8 +19,8 @@ export default function CampsiteDetails(props) {
   }
 
   const handleClick = async () => {
-    const res = await createFavorite(id)
-    console.log(res)
+    await createFavorite(id)
+    props.setToggle(!props.toggle)
   }
 
   const renderFullHookups = () => {

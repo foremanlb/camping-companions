@@ -12,6 +12,8 @@ import { getPosts } from './services/posts'
 import { verifyUser } from './services/auth'
 import Login from './components/Login/Login'
 import SignUp from './components/SignUp/SignUp'
+import Profile from './screens/Profile/Profile'
+import { getAllFavorites} from './services/favorites'
 
 
 function App() {
@@ -19,13 +21,20 @@ function App() {
   const [campsites, setCampsites] = useState([])
   const [posts, setPosts] = useState([])
   const [currentUser, setCurrentUser] = useState(null)
+  const [favorites, setFavorites] = useState([])
 
   useEffect(() => {
     fetchCampsites()
     fetchPosts()
     verify()
+    fetchFavorites()
   }, [])
   
+  const fetchFavorites = async () => {
+    const data = await getAllFavorites()
+    setFavorites(data)
+  }
+
   const fetchPosts = async () => {
     const data = await getPosts()
     setPosts(data)
@@ -62,6 +71,9 @@ function App() {
           </Route>
           <Route path='/signup'>
             <SignUp verify={verify}/>
+          </Route>
+          <Route path='/profile'>
+            <Profile posts={posts}/>
           </Route>
         </div>
       </div>
