@@ -10,7 +10,7 @@ export default function Header() {
       </Link>
       <h1 id='title'>Camping Companions</h1>
       <Link to='/profile'>
-        <h1 id='profile_link'>X</h1>
+        <img src='https://github.com/foremanlb/camping-companions/blob/master/client/src/assets/images/profile_icon.png?raw=true' alt='Profile Icon' id='profile_link'></img>
       </Link>
     </div>
   )

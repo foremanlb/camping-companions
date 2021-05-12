@@ -11,6 +11,8 @@
 }
 #profile_link {
   padding-right: 15px;
+  height: 10vh;
+  width: auto;
 }
 
 #home_link {
