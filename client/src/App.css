@@ -3,8 +3,8 @@
 }
 
 .navbar-container {
-  width: 100vw;
-  height: 90vh;
+  /* width: 100vw; */
+  height: 100%;
   display: flex;
   transition: 1s ease;
   margin-right: 0px;

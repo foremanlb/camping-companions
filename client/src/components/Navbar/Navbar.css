@@ -3,7 +3,7 @@
   display: flex;
   flex-wrap: wrap;
   height: 100%;
-  background-color: #bbe1c3;
+  background-color: #2c5530;
   transition: 1s ease;
   position: relative;
   overflow: scroll;
@@ -13,7 +13,7 @@
   padding: 0;
   flex-basis: 100%;
   text-decoration: none;
-  color: black;
+  color: white;
   width: 100%;
 }
 
