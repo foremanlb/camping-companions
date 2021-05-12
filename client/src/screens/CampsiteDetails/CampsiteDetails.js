@@ -5,6 +5,7 @@ import { getCampsite } from '../../services/campsites'
 import { createFavorite } from '../../services/favorites'
 import CampsitePosts from '../../components/CampsitePosts/CampsitePosts'
 import CreatePost from '../../components/CreatePost/CreatePost'
+import './CampsiteDetails.css'
 
 export default function CampsiteDetails(props) {
   const { id } = useParams()
@@ -85,7 +86,7 @@ export default function CampsiteDetails(props) {
   }
 
   return (
-    <div>
+    <div id='campsite_details'>
       <h1>{campsite.name}</h1>
       <img src={campsite.site_img_url} alt='Campsite'></img>
       <p>{campsite.address}</p>
