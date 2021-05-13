@@ -12,5 +12,10 @@
   text-decoration: none;
   color: #99621e;
   background-color: #f3ffb6;
-  margin-bottom: 5px;
+  border-style: solid;
+  border-image-source: url(https://github.com/foremanlb/camping-companions/blob/master/client/src/assets/images/button_border.png?raw=true);
+  border-image-slice: 50;
+  border-image-width: 80;
+  border-image-outset: 10;
+  border-image-outset: stretch;
 }
