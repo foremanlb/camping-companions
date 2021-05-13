@@ -19,17 +19,19 @@ export default function Post(props) {
   }
 
   const renderCrud = () => {
-    if (post.user_id === props.currentUser.id) {
-      return (
-        <PostCrud post={post} currentUser={props.currentUser} setToggle2={setToggle2} toggle2={toggle2}/>
-      )
-    } else {
-      return (
-        <>
-          <h1 id='post_title'>{post.title}</h1>
-          <p id='post_body'>{post.content}</p>
-        </>
-      )
+    if (props.currentUser) {
+      if (post.user_id === props.currentUser.id) {
+        return (
+          <PostCrud post={post} currentUser={props.currentUser} setToggle2={setToggle2} toggle2={toggle2} />
+        )
+      } else {
+        return (
+          <>
+            <h1 id='post_title'>{post.title}</h1>
+            <p id='post_body'>{post.content}</p>
+          </>
+        )
+      }
     }
   }
 

@@ -4,6 +4,8 @@
   border: 3px ridge #d38b5d;
   color: #2c5530;
   width: 70%;
+  font-family: "Peralta", cursive;
+  text-shadow: 1px 1px 2px #739e82;
 }
 
 #state_container {
