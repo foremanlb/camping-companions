@@ -6,6 +6,11 @@ import { createFavorite } from '../../services/favorites'
 import CampsitePosts from '../../components/CampsitePosts/CampsitePosts'
 import CreatePost from '../../components/CreatePost/CreatePost'
 import './CampsiteDetails.css'
+import FullHookups from '../../components/FullHookups/FullHookups'
+import PartialHookups from '../../components/PartialHookups/PartialHookups'
+import Fishing from '../../components/Fishing/Fishing'
+import Showers from '../../components/Showers/Showers'
+import Bathrooms from '../../components/Bathrooms/Bathrooms'
 
 export default function CampsiteDetails(props) {
   const { id } = useParams()
@@ -25,85 +30,47 @@ export default function CampsiteDetails(props) {
     props.setToggle(!props.toggle)
   }
 
-  const renderFullHookups = () => {
-    if (campsite.full_hookups) {
-      return (
-        <p>Has full hookups.</p>
-      )
-    } else {
-      return (
-        <p>Does not have full hookups.</p>
-      )
-    }
-  }
 
-  const renderPartialHookups = () => {
-    if (campsite.partial_hookups) {
+  const renderCreate = () => {
+    if (props.currentUser) {
       return (
-        <p>Has partial hookups.</p>
-      )
-    } else {
-      return (
-        <p>Does not have partial hookups.</p>
-      )
-    }
-  }
-
-  const renderFishing = () => {
-    if (campsite.fishing) {
-      return (
-        <p>Has fishing.</p>
-      )
-    } else {
-      return (
-        <p>Does not have fishing.</p>
-      )
-    }
-  }
-
-  const renderShowers = () => {
-    if (campsite.showers) {
-      return (
-        <p>Has showers.</p>
-      )
-    } else {
-      return (
-        <p>Does not have showers.</p>
-      )
-    }
-  }
-
-  const renderBathrooms = () => {
-    if (campsite.bathrooms) {
-      return (
-        <p>Has bathrooms.</p>
-      )
-    } else {
-      return (
-        <p>Does not have bathrooms.</p>
+        <CreatePost campsite={id} currentUser={props.currentUser} toggle={props.toggle} setToggle={props.setToggle} />
       )
     }
   }
 
   return (
     <div id='campsite_details'>
-      <h1>{campsite.name}</h1>
+      <h1 className='details_name'>{campsite.name}</h1>
       <img src={campsite.site_img_url} alt='Campsite'></img>
-      <p>{campsite.address}</p>
-      <p>{campsite.phone_number}</p>
-      <p>Campground Website:<br/><a href={campsite.website} target='_blank' rel='noreferrer noopener'>{campsite.website}</a></p>
-      <h3>Description</h3>
-      <p>{campsite.description}</p>
-      <h3>Open Season</h3>
-      <p>{campsite.season}</p>
-      {renderFullHookups()}
-      {renderPartialHookups()}
-      {renderShowers()}
-      {renderBathrooms()}
-      {renderFishing()}
+      <h3 className='details_title'>Contact Info</h3>
+      <div className='details_card'>
+        <p>{campsite.address}</p>
+        <p>{campsite.phone_number}</p>
+        <p>Campground Website:<br /><a href={campsite.website} target='_blank' rel='noreferrer noopener'>{campsite.website}</a></p>
+      </div>
+      <h3 className='details_title'>Description</h3>
+      <div className='details_card' id='details_description'>
+        <p>{campsite.description}</p>
+      </div>
+      <h3 className='details_title'>Open Season</h3>
+      <div className='details_card'>
+        <p>{campsite.season}</p>
+      </div>
+      <h3 className='details_title'>Amenities</h3>
+      <div className='details_card'>
+        <FullHookups campsite={campsite}/>
+        <PartialHookups campsite={campsite}/>
+        <Showers campsite={campsite}/>
+        <Bathrooms campsite={campsite}/>
+        <Fishing campsite={campsite} />
+      </div>
       <img src={campsite.map_img_url} alt='Campsite Map'></img>
-      <button onClick={handleClick}>Add to favorites</button>
-      <CreatePost campsite={id} currentUser={props.currentUser} toggle={props.toggle} setToggle={props.setToggle} />
+      <div id='favorite_container'>
+        <button onClick={handleClick} id='add_favorite'>Add to favorites</button>
+      </div>
+      <h3 className='details_title'>Posts</h3>
+      {renderCreate()}
       <CampsitePosts campsite={campsite.id} posts={props.posts} currentUser={props.currentUser}/>
     </div>
   )

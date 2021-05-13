@@ -4,7 +4,7 @@
   align-items: center;
   width: 25vw;
   flex: 1 0 33%;
-  background-color: rgba(255, 255, 255, 0.735);
+  background-color: rgba(255, 255, 255, 0.625);
   border-radius: 10px;
   border: 3px ridge #d38b5d;
   color: #2c5530;
@@ -26,8 +26,12 @@
 .link_container {
   display: flex;
   background-image: linear-gradient(to left, #b4a68d, #f8e7c5);
+  background-color: #b4a68d;
   height: 40px;
   align-items: center;
   border-top: 2px solid black;
   border-bottom: 2px solid black;
+}
+
+#favorite_container {
 }
