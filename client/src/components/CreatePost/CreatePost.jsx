@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import {createPost} from '../../services/posts'
+import { createPost } from '../../services/posts'
+import './CreatePost.css'
 
 export default function CreatePost(props) {
   const defaultInput = {
@@ -26,7 +27,7 @@ export default function CreatePost(props) {
 
   return (
     <div>
-      <form onSubmit={handleSubmit} onChange={handleChange}>
+      <form onSubmit={handleSubmit} onChange={handleChange}  id='create_post'>
         <label htmlFor="title">Title</label>
         <input name='title' required/>
         <label htmlFor='content'>Content</label>
@@ -34,8 +35,10 @@ export default function CreatePost(props) {
           rows='10'
           columns='15'
           type='text'
-          name='content'/>
-        <button type='submit'>Create Post</button>
+          name='content' />
+        <div id='create_button_container'>
+          <button type='submit' id='create_post_button'>Create Post</button>
+        </div>
       </form>
     </div>
   )

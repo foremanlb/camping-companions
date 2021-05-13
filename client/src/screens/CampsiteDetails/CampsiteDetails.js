@@ -47,7 +47,7 @@ export default function CampsiteDetails(props) {
       <div className='details_card'>
         <p>{campsite.address}</p>
         <p>{campsite.phone_number}</p>
-        <p>Campground Website:<br /><a href={campsite.website} target='_blank' rel='noreferrer noopener'>{campsite.website}</a></p>
+        <p>Campground Website:<br /><a href={campsite.website} target='_blank' rel='noreferrer noopener' id='campsite_webpage'>{campsite.website}</a></p>
       </div>
       <h3 className='details_title'>Description</h3>
       <div className='details_card' id='details_description'>

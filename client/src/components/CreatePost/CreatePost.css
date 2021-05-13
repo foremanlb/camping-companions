@@ -1,0 +1,32 @@
+#create_post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.625);
+  border-radius: 10px;
+  border: 3px ridge #d38b5d;
+  color: #2c5530;
+  width: 25vw;
+  padding: 10px;
+}
+
+#create_post_button {
+  border-style: solid;
+  border-image-source: url(https://github.com/foremanlb/camping-companions/blob/master/client/src/assets/images/button_border.png?raw=true);
+  border-image-slice: 40;
+  border-image-width: 20;
+  border-image-outset: 5 10;
+  border-image-outset: stretch;
+  outline: none;
+  background-color: transparent;
+}
+
+#create_button_container {
+  display: flex;
+  background-image: linear-gradient(to left, #b4a68d, #f8e7c5);
+  background-color: #b4a68d;
+  height: 30px;
+  align-items: center;
+  border-top: 1.5px solid black;
+  border-bottom: 1.5px solid black;
+}

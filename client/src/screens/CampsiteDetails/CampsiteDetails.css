@@ -41,10 +41,10 @@
 
 #add_favorite {
   border-style: solid;
-  border-image-source: url(https://github.com/foremanlb/camping-companions/blob/master/client/src/assets/images/favorite_border.png?raw=true);
-  border-image-slice: 30;
+  border-image-source: url(https://github.com/foremanlb/camping-companions/blob/master/client/src/assets/images/button_border.png?raw=true);
+  border-image-slice: 40;
   border-image-width: 20;
-  border-image-outset: 15 10;
+  border-image-outset: 5 10;
   border-image-outset: stretch;
   outline: none;
   background-color: transparent;
@@ -56,6 +56,10 @@
   background-color: #b4a68d;
   height: 30px;
   align-items: center;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
+  border-top: 1.5px solid black;
+  border-bottom: 1.5px solid black;
+}
+
+#campsite_webpage {
+  color: #2c5530;
 }
