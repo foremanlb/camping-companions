@@ -1,0 +1,16 @@
+.campsite_card {
+  width: 25vw;
+  flex: 1 0 33%;
+  background-color: rgba(255, 255, 255, 0.735);
+  border-radius: 10px;
+  border: 3px ridge #d38b5d;
+  color: #2c5530;
+  padding: 10px;
+}
+
+#campsite_link {
+  text-decoration: none;
+  color: #99621e;
+  background-color: #f3ffb6;
+  margin-bottom: 5px;
+}

@@ -1,6 +1,7 @@
 import React from 'react'
 import {useParams} from 'react-router-dom'
 import CampsiteContainer from '../../components/CampsiteContainer/CampsiteContainer'
+import './Campsites.css'
 
 export default function Campsites(props) {
   const { id } = useParams()
@@ -59,8 +60,8 @@ export default function Campsites(props) {
 
   const stateName = states.[id]
   return (
-    <div>
-      <h1>Welcome to {stateName}</h1>
+    <div id='state_container'>
+      <h1 id='state_title'>Welcome to {stateName}</h1>
       <CampsiteContainer abbreviation={id} campsites={props.campsites} />
     </div>
   )
