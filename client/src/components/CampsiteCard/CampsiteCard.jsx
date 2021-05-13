@@ -8,8 +8,10 @@ export default function CampsiteCard(props) {
     <div className='campsite_card'>
       <h2>{campsite.name}</h2>
       <h3>{campsite.address}</h3>
-      <p>{campsite.description.slice(0, 50)}...</p>
-      <Link to={`/campsite/${campsite.id}`} id='campsite_link'>Details</Link>
+      <p>{campsite.description.slice(0, 75)}...</p>
+      <div className='link_container'>
+        <Link to={`/campsite/${campsite.id}`} id='campsite_link'>Details</Link>
+      </div>
     </div>
   )
 }
