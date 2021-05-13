@@ -1,5 +1,6 @@
 import {useState} from 'react'
-import { updatePost, deletePost} from '../../services/posts'
+import { updatePost, deletePost } from '../../services/posts'
+import './PostCrud.css'
 
 export default function PostCrud(props) {
   const post = props.post
@@ -26,8 +27,8 @@ export default function PostCrud(props) {
   }
 
   return (
-    <div>
-      <form onSubmit={handleSubmit} onChange={handleChange}>
+    <div id='crud_container'>
+      <form onSubmit={handleSubmit} onChange={handleChange} id='post_crud'>
         <label htmlFor="title">Title</label>
         <input
           name='title'
@@ -40,9 +41,13 @@ export default function PostCrud(props) {
           type='text'
           name='content'
           value={input.content} />
-        <button type='submit'>Update Post</button>
+        <div id='update_container'>
+          <button type='submit' id='update_button'>Update Post</button>
+        </div>
       </form>
-      <button onClick={handleDelete}>Delete Post</button>
+      <div id='delete_container'>
+        <button onClick={handleDelete} id='delete_button'>Delete Post</button>
+      </div>
     </div>
   )
 }

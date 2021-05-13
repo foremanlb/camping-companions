@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import {getPost} from '../../services/posts'
 import { useParams } from 'react-router-dom'
 import PostCrud from '../../components/PostCrud/PostCrud'
+import './Post.css'
 
 export default function Post(props) {
   const { id } = useParams()
@@ -25,15 +26,15 @@ export default function Post(props) {
     } else {
       return (
         <>
-          <h1>{post.title}</h1>
-          <p>{post.content}</p>
+          <h1 id='post_title'>{post.title}</h1>
+          <p id='post_body'>{post.content}</p>
         </>
       )
     }
   }
 
   return (
-    <div>
+    <div id='post'>
       {renderCrud()}
     </div>
   )
