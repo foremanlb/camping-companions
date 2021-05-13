@@ -28,4 +28,11 @@
   font-family: "Peralta", cursive;
   text-shadow: 1px 1px 2px #739e82;
   padding: 3px;
+  flex-grow: 1;
+}
+
+#logout {
+  padding-left: 15px;
+  height: 10vh;
+  width: auto;
 }

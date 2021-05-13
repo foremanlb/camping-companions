@@ -47,7 +47,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
+      <Header currentUser={currentUser} setCurrentUser={setCurrentUser}/>
       <div className='navbar-container'>
         <Navbar isActive={isActive} setIsActive={setIsActive}/>
         <div className={isActive ? 'main-content' : 'main-content_large'}>

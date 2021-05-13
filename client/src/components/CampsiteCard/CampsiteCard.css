@@ -14,7 +14,6 @@
 #campsite_link {
   text-decoration: none;
   color: #2c5530;
-  /* background-color: #b4a68d; */
   border-style: solid;
   border-image-source: url(https://github.com/foremanlb/camping-companions/blob/master/client/src/assets/images/button_border.png?raw=true);
   border-image-slice: 40;
