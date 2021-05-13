@@ -1,7 +1,7 @@
 #main_photo {
   border: 4px ridge #739e82;
   border-radius: 15px;
-  width: 75vw;
+  width: 75%;
   height: auto;
 }
 
@@ -30,4 +30,5 @@
   font-family: "Peralta", cursive;
   text-shadow: 1px 1px 2px #739e82;
   padding: 3px;
+  width: 80%;
 }

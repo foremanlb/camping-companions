@@ -9,14 +9,8 @@
   color: #2c5530;
   border-bottom: 4px ridge #d38b5d;
 }
-#profile_link {
+.header_link {
   padding-right: 15px;
-  height: 10vh;
-  width: auto;
-}
-
-#home_link {
-  padding-left: 15px;
   height: 10vh;
   width: auto;
 }
@@ -31,8 +25,13 @@
   flex-grow: 1;
 }
 
-#logout {
-  padding-left: 15px;
-  height: 10vh;
-  width: auto;
+@media (max-width: 600px) {
+  #title {
+    font-size: 12px;
+  }
+
+  .header_link {
+    width: 12vw;
+    height: auto;
+  }
 }

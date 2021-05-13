@@ -13,7 +13,7 @@ export default function Header(props) {
     if (props.currentUser) {
       return (
         <div>
-          <input type='image' id='logout' src='https://github.com/foremanlb/camping-companions/blob/master/client/src/assets/images/logout_button.png?raw=true' onClick={handleClick} alt='compass or logout icon' />
+          <input type='image' className='header_link' src='https://github.com/foremanlb/camping-companions/blob/master/client/src/assets/images/logout_button.png?raw=true' onClick={handleClick} alt='compass or logout icon' />
         </div>
       )
     }
@@ -23,11 +23,11 @@ export default function Header(props) {
     <div className='header'>
       <div className='header'>
       <Link to='/'>
-        <img src='https://github.com/foremanlb/camping-companions/blob/master/client/src/assets/images/home_icon.png?raw=true' alt='campfire or home icon' id='home_link' ></img>
+        <img src='https://github.com/foremanlb/camping-companions/blob/master/client/src/assets/images/home_icon.png?raw=true' alt='campfire or home icon' className='header_link' ></img>
       </Link>
       <h1 id='title'>Camping Companions</h1>
       <Link to='/profile'>
-        <img src='https://github.com/foremanlb/camping-companions/blob/master/client/src/assets/images/profile_icon.png?raw=true' alt='backpack or Profile Icon' id='profile_link'></img>
+        <img src='https://github.com/foremanlb/camping-companions/blob/master/client/src/assets/images/profile_icon.png?raw=true' alt='backpack or Profile Icon' className='header_link'></img>
         </Link>
     {renderLogout()}
       </div>
