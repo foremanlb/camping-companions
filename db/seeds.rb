@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Campsite.delete_all
+
 campsites = Campsite.create([
                               {
                                 name: 'Desoto State Park',
@@ -19,8 +21,8 @@ campsites = Campsite.create([
                                 fishing: true,
                                 showers: true,
                                 bathrooms: true,
-                                map_img_url: '',
-                                site_img_url: '',
+                                map_img_url: 'https://github.com/foremanlb/camping-companions/blob/master/client/src/images/campsites/Desoto/map.jpeg?raw=true',
+                                site_img_url: 'https://github.com/foremanlb/camping-companions/blob/master/client/src/images/campsites/Desoto/falls.jpeg?raw=true',
                                 season: 'Year Round'
                               }
                               # {

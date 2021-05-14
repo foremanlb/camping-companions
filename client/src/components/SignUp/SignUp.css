@@ -19,7 +19,7 @@
 
 #submit_signup_button {
   border-style: solid;
-  border-image-source: url(https://github.com/foremanlb/camping-companions/blob/master/client/src/assets/images/button_border.png?raw=true);
+  border-image-source: url(https://github.com/foremanlb/camping-companions/blob/master/client/src/images/css/button_border.png?raw=true);
   border-image-slice: 40;
   border-image-width: 20;
   border-image-outset: 5 10;
