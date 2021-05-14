@@ -21,3 +21,12 @@
 .main-content_large {
   width: 100%;
 }
+
+@media (max-width: 600px) {
+  .App h1 {
+    font-size: 26px;
+  }
+  .App h3 {
+    font-size: 18px;
+  }
+}

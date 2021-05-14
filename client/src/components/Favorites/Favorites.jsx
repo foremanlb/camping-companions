@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { getAllFavorites } from '../../services/favorites'
 import CampsiteCard from '../CampsiteCard/CampsiteCard'
+import './Favorites.css'
 
 export default function Favorites(props) {
   const [favorites, setFavorites] = useState([])
@@ -16,7 +17,7 @@ export default function Favorites(props) {
 
 
   return (
-    <div>
+    <div id='profile_favorites_container'>
       {favorites.map(favorite => {
         return <CampsiteCard campsite={favorite} />
       })}
