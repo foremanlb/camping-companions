@@ -7,7 +7,7 @@
   justify-content: space-between;
   background-color: #739e82;
   color: #2c5530;
-  border-bottom: 4px ridge #d38b5d;
+  border-bottom: 6px ridge #d38b5d;
 }
 .header_link {
   padding-right: 15px;
@@ -21,6 +21,7 @@
   border: 3px ridge #d38b5d;
   font-family: "Peralta", cursive;
   text-shadow: 1px 1px 2px #739e82;
+  box-shadow: 4px 4px 8px #000000bf;
   padding: 3px;
   flex-grow: 1;
 }

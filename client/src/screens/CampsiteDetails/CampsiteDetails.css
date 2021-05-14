@@ -10,6 +10,7 @@
   background-color: #f3ffb6af;
   border-radius: 10px;
   border: 3px ridge #739e82;
+  box-shadow: 4px 4px 8px #000000bf;
   color: #2c5530;
   width: 30%;
   font-family: "Peralta", cursive;
@@ -20,6 +21,7 @@
   background-color: rgba(255, 255, 255, 0.735);
   border-radius: 10px;
   border: 4px ridge #739e82;
+  box-shadow: 4px 4px 8px #000000bf;
   color: #2c5530;
   width: 70%;
   font-family: "Peralta", cursive;
@@ -39,6 +41,7 @@
   background-color: rgba(255, 255, 255, 0.625);
   border-radius: 10px;
   border: 3px ridge #739e82;
+  box-shadow: 4px 4px 8px #000000bf;
   color: #2c5530;
   padding: 10px;
 }
