@@ -194,8 +194,14 @@ src
 
 ## Code Showcase
 
-> Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
+    const handleClick = () => {
+    props.setIsActive(!props.isActive)
+    }
+
+    return (
+    <div className={props.isActive ? 'navbar' : 'navbar_small'}>
+      <button type='button' className='menu' onClick={handleClick} >MENU</button>
 
 ## Code Issues & Resolutions
 
-> Use this section to list of all major issues encountered and their resolution.
+> I mostly ran across issues involving the creation of dead space caused by my styling.
