@@ -194,13 +194,23 @@ src
 
 ## Code Showcase
 
-    const handleClick = () => {
-    props.setIsActive(!props.isActive)
+```javascript
+const handleClick = async () => {
+  try {
+    await createFavorite(id);
+    props.setToggle(!props.toggle);
+    alert("Added to favorites");
+  } catch (error) {
+    if (error.response.status === 401) {
+      alert("Must be logged in to add favorite");
+    } else if (error.response.status === 500) {
+      alert("Favorite already exists.");
+    } else {
+      alert("unknown error");
     }
-
-    return (
-    <div className={props.isActive ? 'navbar' : 'navbar_small'}>
-      <button type='button' className='menu' onClick={handleClick} >MENU</button>
+  }
+};
+```
 
 ## Code Issues & Resolutions
 
