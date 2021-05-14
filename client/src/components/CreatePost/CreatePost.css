@@ -31,3 +31,9 @@
   border-top: 1.5px solid black;
   border-bottom: 1.5px solid black;
 }
+
+@media (max-width: 600px) {
+  #create_post {
+    width: 65vw;
+  }
+}

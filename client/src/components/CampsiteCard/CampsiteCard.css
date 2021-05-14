@@ -32,3 +32,10 @@
   border-top: 2px solid black;
   border-bottom: 2px solid black;
 }
+
+@media (max-width: 600px) {
+  .campsite_card {
+    width: 65%;
+    flex: 0 1 auto;
+  }
+}

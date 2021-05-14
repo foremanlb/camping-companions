@@ -70,3 +70,10 @@
 #campsite_webpage {
   color: #2c5530;
 }
+
+@media (max-width: 600px) {
+  .details_card {
+    width: 65%;
+    flex: 0 1 auto;
+  }
+}
