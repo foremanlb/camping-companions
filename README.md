@@ -21,6 +21,8 @@
 
 _**Camping Companions** is an application designed to bring people with a love for camping together. Not everyone has friends with the same interests, such as camping. We are here to help bring those people together to allow them to share their love of nature with like minded individuals._
 
+[Camping Companions Website](https://gifted-nobel-528bae.netlify.app/)
+
 <br>
 
 ## MVP
@@ -157,19 +159,19 @@ src
 
 | Task               | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------ | :------: | :------------: | :-----------: | :---------: |
-| Fonts              |    L     |     30 min     |               |             |
-| Images             |    L     |      1 hr      |               |             |
-| Navbar             |    M     |    2.5 hrs     |               |             |
-| Campsite Container |    M     |      2 hr      |               |             |
-| Campsite Card      |    M     |      2 hr      |               |             |
-| Auth Services      |    H     |     4 hrs      |               |             |
-| Post Services      |    H     |      2 hr      |               |             |
-| Profile            |    M     |     3 hrs      |               |             |
-| State              |    M     |      2 hr      |               |             |
-| SignUp             |    H     |     3 hrs      |               |             |
-| Campsite Details   |    M     |      2 hr      |               |             |
-| CSS                |    H     |     9 hrs      |               |             |
-| TOTAL              |  36 hrs  |                |               |             |
+| Fonts              |    L     |     30 min     |    30 min     |   30 min    |
+| Images             |    L     |      1 hr      |     2 hrs     |    2 hrs    |
+| Navbar             |    M     |    2.5 hrs     |     4 hrs     |    4 hrs    |
+| Campsite Container |    M     |      2 hr      |     1 hr      |    1 hr     |
+| Campsite Card      |    M     |      2 hr      |     1 hr      |    1 hr     |
+| Auth Services      |    H     |     4 hrs      |     1 hr      |    1 hr     |
+| Post Services      |    H     |      2 hr      |     1 hr      |    1 hr     |
+| Profile            |    M     |     3 hrs      |     1 hr      |    1 hr     |
+| State              |    M     |      2 hr      |     1 hr      |    1 hr     |
+| SignUp             |    H     |     3 hrs      |     2 hrs     |    2 hrs    |
+| Campsite Details   |    M     |      2 hr      |     2 hrs     |    2 hrs    |
+| CSS                |    H     |     9 hrs      |     9 hrs     |    9 hrs    |
+| TOTAL              |          |     36hrs      |    26 hrs     |   26 hrs    |
 
 <br>
 
