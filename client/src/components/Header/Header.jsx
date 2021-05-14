@@ -19,17 +19,25 @@ export default function Header(props) {
     }
   }
 
+  const renderProfileButton = () => {
+    if (props.currentUser) {
+      return (
+      <Link to='/profile'>
+        <img src='https://github.com/foremanlb/camping-companions/blob/master/client/src/images/css/profile_icon.png?raw=true' alt='backpack or Profile Icon' className='header_link'></img>
+      </Link>
+      )
+    }
+  }
+
   return (
     <div className='header'>
       <div className='header'>
       <Link to='/'>
         <img src='https://github.com/foremanlb/camping-companions/blob/master/client/src/images/css/home_icon.png?raw=true' alt='campfire or home icon' className='header_link' ></img>
       </Link>
-      <h1 id='title'>Camping Companions</h1>
-      <Link to='/profile'>
-        <img src='https://github.com/foremanlb/camping-companions/blob/master/client/src/images/css/profile_icon.png?raw=true' alt='backpack or Profile Icon' className='header_link'></img>
-        </Link>
-    {renderLogout()}
+        <h1 id='title'>Camping Companions</h1>
+      {renderProfileButton()}
+      {renderLogout()}
       </div>
     </div>
   )

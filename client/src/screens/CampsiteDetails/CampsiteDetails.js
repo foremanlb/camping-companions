@@ -26,8 +26,13 @@ export default function CampsiteDetails(props) {
   }
 
   const handleClick = async () => {
-    await createFavorite(id)
+    try {
+      await createFavorite(id)
     props.setToggle(!props.toggle)
+    alert('Added to favorites')
+    } catch (error) {
+      alert('Favorite already exists')
+    } 
   }
 
 

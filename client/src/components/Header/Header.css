@@ -26,13 +26,15 @@
   flex-grow: 1;
 }
 
+@media (max-width: 750px) {
+  .header_link {
+    width: 8vw;
+    height: auto;
+  }
+}
+
 @media (max-width: 600px) {
   #title {
     font-size: 12px;
-  }
-
-  .header_link {
-    width: 12vw;
-    height: auto;
   }
 }

@@ -28,6 +28,7 @@ export default function Profile(props) {
       {renderPosts()}
       <h3 className='profile_title'>Favorites</h3>
       {renderFavorites()}
+      <div id='blank_space'></div>
     </div>
   )
 }
