@@ -77,3 +77,21 @@
     flex: 0 1 auto;
   }
 }
+
+#campsite_img {
+  border: 4px ridge #739e82;
+  box-shadow: 4px 4px 8px #000000bf;
+  border-radius: 15px;
+  width: 75%;
+  height: auto;
+}
+
+#campsite_map {
+  border: 4px ridge #739e82;
+  box-shadow: 4px 4px 8px #000000bf;
+  border-radius: 15px;
+  width: 75%;
+  height: auto;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}

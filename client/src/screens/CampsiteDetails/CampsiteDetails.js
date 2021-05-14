@@ -42,7 +42,7 @@ export default function CampsiteDetails(props) {
   return (
     <div id='campsite_details'>
       <h1 className='details_name'>{campsite.name}</h1>
-      <img src={campsite.site_img_url} alt='Campsite'></img>
+      <img src={campsite.site_img_url} alt='Campsite' id='campsite_img'></img>
       <h3 className='details_title'>Contact Info</h3>
       <div className='details_card'>
         <p>{campsite.address}</p>
@@ -65,7 +65,7 @@ export default function CampsiteDetails(props) {
         <Bathrooms campsite={campsite}/>
         <Fishing campsite={campsite} />
       </div>
-      <img src={campsite.map_img_url} alt='Campsite Map'></img>
+      <img src={campsite.map_img_url} alt='Campsite Map' id='campsite_map'></img>
       <div id='favorite_container'>
         <button onClick={handleClick} id='add_favorite'>Add to favorites</button>
       </div>
