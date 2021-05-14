@@ -31,7 +31,13 @@ export default function CampsiteDetails(props) {
     props.setToggle(!props.toggle)
     alert('Added to favorites')
     } catch (error) {
-      alert('Favorite already exists')
+      if (error.response.status === 401) {
+        alert('Must be logged in to add favorite')
+      } else if (error.response.status === 500) {
+        alert('Favorite already exists.')
+      } else {
+        alert('unknown error')
+      }
     } 
   }
 
